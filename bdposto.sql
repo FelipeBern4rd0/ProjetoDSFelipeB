@@ -41,7 +41,7 @@ CREATE TABLE `cliente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
-
+-- [CORREÇÃO TABELA DE CLIENTE: Aumentar o nome do ciente para varchar(40), idade precisa ser int, inserir cidade varchar(30) e Estado char(02).----
 --
 -- Estrutura da tabela `produtos`
 --
@@ -57,7 +57,7 @@ CREATE TABLE `produtos` (
   `Nome` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
+-- [ CORREÇÃO TABELA PRODUTOS: alterar para int e autoincrement o cod_produto, quantidade e valor deixar como double (5,2. No campo combustível mudar para tipo] ----
 -- Índices para tabelas despejadas
 --
 
