@@ -32,27 +32,29 @@ USE `bdposto`;
 DROP TABLE IF EXISTS `cliente`;
 CREATE TABLE `cliente` (
   `CPF` varchar(15) NOT NULL,
-  `Nome` varchar(35) NOT NULL,
+  `Nome` varchar(40) NOT NULL,
   `Email` varchar(30) NOT NULL,
-  `Idade` varchar(11) NOT NULL,
+  `Idade` int NOT NULL,
   `Endereco` varchar(35) NOT NULL,
   `Telefone` varchar(15) NOT NULL,
   `Profissao` varchar(30) NOT NULL
+  `Cidade` varchar(30) NOT NULL
+  `Estado` char(02) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
--- [CORREÇÃO TABELA DE CLIENTE: Aumentar o nome do ciente para varchar(40), idade precisa ser int, inserir cidade varchar(30) e Estado char(02).----
+-- [CORREÇÃO TABELA DE CLIENTE:, 
 --
 -- Estrutura da tabela `produtos`
 --
 
 DROP TABLE IF EXISTS `produtos`;
 CREATE TABLE `produtos` (
-  `cod_produto` varchar(15) NOT NULL,
+  `cod_produto` int NOT NULL auto_increment,
   `Validade` varchar(35) NOT NULL,
   `Combustivel` varchar(30) NOT NULL,
-  `Quantidade` varchar(44) NOT NULL,
-  `Valor` varchar(50) NOT NULL,
+  `Quantidade` double(5,2) NOT NULL,
+  `Valor` double(5,2) NOT NULL,
   `Unidade_medida` varchar(15) NOT NULL,
   `Nome` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
